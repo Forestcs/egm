@@ -1,0 +1,66 @@
+/* pages/home/home.wxss */
+
+.home-top {
+  margin-bottom: 25rpx;
+  background: #fff;
+}
+
+.home-head {
+  width: 100%;
+  text-align: center;
+  padding: 96rpx 0 40rpx 0;
+}
+
+.home-head image {
+  width: 203rpx;
+  height: 203rpx;
+  border-radius: 100rpx;
+}
+
+.home-btn button {
+  display: inline-block;
+  width: 254rpx;
+  height: 91rpx;
+  line-height: 91rpx;
+  margin: 60rpx 60rpx 46rpx 60rpx;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 150rpx;
+}
+
+.btn-color-1 {
+  background: #FFAE29;
+}
+
+.btn-color-2 {
+  background: #22c18b;
+}
+btn-hover-2{
+  background: #17a374;
+}
+
+.home-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.home-menu {
+  width: 49%;
+  height: 300rpx;
+  text-align: center;
+  background: #fff;
+  margin: 5rpx;
+}
+
+.home-item image {
+  width: 77rpx;
+  height: 77rpx;
+  padding: 70rpx 0 26rpx 0;
+}
+
+.badge {
+  top: -140rpx;
+  left: -75rpx;
+}

@@ -1,0 +1,124 @@
+/* pages/vacation/vacation.wxss */
+
+.list-type {
+  display: inline-block;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  padding-left: 30rpx;
+  margin: 0;
+  color: rgba(153, 153, 153, 1);
+  background: #fff;
+  text-align: left;
+}
+.scoll-h{
+  height: 100%;
+}
+.vacation-item {
+  margin-top: 20rpx;
+  padding: 35rpx 0;
+  background: #fff;
+}
+
+.vacation-type view {
+  width: 520rpx;
+  font-size: 28rpx;
+  padding: 0rpx 28rpx 20rpx 28rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.vacation-type  button {
+  position: relative;
+  top: 10rpx;
+  width: 155rpx;
+  height: 45rpx;
+  font-size: 25rpx;
+  color: rgba(25, 190, 107, 1);
+  background: #fff;
+  line-height: 45rpx;
+  padding: 0;
+  border: 1rpx solid rgba(25, 190, 107, 1);
+  border-radius: 20rpx;
+}
+
+.vacation-time {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+  padding: 10rpx 28rpx;
+}
+
+.vacation-select {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.vacation-select .tit {
+  width: 550rpx;
+  font-size: 32rpx;
+  color: rgba(51, 51, 51, 1);
+  padding: 30rpx;
+}
+
+.vacation-select .pick {
+  font-size: 28rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.vacation-section {
+  height: 490rpx;
+  padding: 30rpx;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.time-line {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: rgba(51, 51, 51, 1);
+  background: #fff;
+  padding: 0 28rpx;
+  border-top:1rpx solid rgb(241, 241, 241);
+}
+.time-line i-icon{
+  position: relative;
+  top: -3rpx;
+  margin-right: 20rpx;
+}
+.dateInline{
+  display: inline-block;
+  width: 200rpx;
+}
+.vacation-tit2 {
+  font-size: 32rpx;
+  padding-bottom: 35rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.vacation-section textarea {
+  height: 346rpx;
+  padding: 33rpx;
+  border: 1rpx solid rgba(229, 229, 229, 1);
+  font-size: 26rpx;
+  color: rgba(51, 51, 51, 1);
+}
+.apply-bottom {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 95rpx;
+  background: #fff;
+}
+
+.apply-bottom view {
+  height: 95rpx;
+  font-size: 26rpx;
+}
+.appply-btn {
+  width: 230rpx;
+  text-align: center;
+  line-height: 95rpx;
+  background: #ff9f00;
+  color: #fff;
+}

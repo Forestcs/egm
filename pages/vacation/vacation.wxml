@@ -1,0 +1,101 @@
+<view>
+  <i-toast id="toast" />
+  <i-message id="message" />
+
+  <i-tabs current="{{ currentTab }}" color="#FF9C13" bindchange="handleChange">
+    <i-tab key="0" title="休假记录"></i-tab>
+    <i-tab key="1" title="我要休假"></i-tab>
+  </i-tabs>
+  <!-- 类型筛选 -->
+  <view wx:if='{{currentTab==0}}'>
+    <view class='list-type'>
+      <picker bindchange="typeChange" value="{{typeIndex}}" range="{{typeList}}">
+        <view class="picker">
+          {{typeList[typeIndex]}}
+          <i-icon type="unfold" />
+        </view>
+      </picker>
+    </view>
+  </view>
+  <!-- 页面 -->
+  <swiper style="height:{{currentTab==0?clientHeight*2-175+'rpx':clientHeight*2-175+'rpx'}};" class='tab-swiper' current="{{currentTab}}" duration="300">
+    <!-- 休假记录tab页面 -->
+    <swiper-item>
+      <scroll-view scroll-y="false" class="scoll-h">
+      <block wx:for='{{leaveList}}'> 
+        <view class='vacation-item'>
+          <view class='vacation-type'>
+            <view class='inline'>{{item.leaveType}}</view>
+            <button class='inline'>{{item.leaveStatus}}</button>
+          </view>
+          <view class='vacation-time'>● 开始时间：{{item.beginTime}}</view>
+          <view class='vacation-time'>● 结束时间：{{item.endTime}}</view>
+        </view>
+        </block>
+          <i-load-more wx:if='{{leaveList.length==0}}' i-class='noList'  tip="暂无记录" loading="{{ false }}" />
+      </scroll-view>
+    </swiper-item>
+    <!-- 申请休假tab页面 -->
+    <swiper-item>
+      <scroll-view scroll-y="false" class="scoll-h">
+        <view class='vacation-select'>
+          <view>
+            <view class='inline tit'>请假类型</view>
+            <view class='inline pick'>
+              <picker bindchange="applyTypeChange" value="{{applyIndexType}}" range-key="{{'name'}}" range="{{typeArray}}">
+                <view class="picker">
+                  {{typeArray[applyTypeIndex].name}}
+                  <i-icon type="unfold" />
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <view>
+          <view class='time-line'>
+            <i-icon type="time" size="25" />
+            <view class='dateInline'>
+              <picker mode="date" value="{{startDate}}" start="{{startDatePick}}" end="{{endDatePick}}" bindchange="startDateChange">
+                <view class="picker">
+                  {{startDate}}
+                </view>
+              </picker>
+            </view>
+            <view class='inline'>
+              <picker mode="multiSelector" bindchange="startTimeChange" bindcolumnchange="startTimeColumnChange" value="{{startTime}}" range="{{startTimeArray}}">
+                <view class="picker">
+                  {{startTimeArray[0][startTime[0]]}}:{{startTimeArray[1][startTime[1]]}}
+                </view>
+              </picker>
+            </view>
+          </view>
+          <view class='time-line'>
+            <i-icon type="time" size="25" />
+            <view class='dateInline'>
+              <picker mode="date" value="{{endDate}}" start="{{startDatePick}}" end="{{endDatePick}}" bindchange="endDateChange">
+                <view class="picker">
+                  {{endDate}}
+                </view>
+              </picker>
+            </view>
+            <view class='inline'>
+              <picker mode="multiSelector" bindchange="endTimeChange" bindcolumnchange="endTimeColumnChange" value="{{endTime}}" range="{{endTimeArray}}">
+                <view class="picker">
+                  {{endTimeArray[0][endTime[0]]}}:{{endTimeArray[1][endTime[1]]}}
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <view class="vacation-section">
+          <view class='vacation-tit2'>请假事由</view>
+          <textarea bindinput="bindTextAreaBlur" />
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+  <view wx:if='{{currentTab==1}}' class='apply-bottom'>
+    <view class='fr appply-btn' bindtap='toLeaveApply'>申请休假</view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<view>
+<i-message id="message" />
+  <i-tabs current="{{ currentTab }}" color="#FF9C13" bindchange="handleChange">
+    <i-tab key="0" title="全部订单"></i-tab>
+    <i-tab key="1" title="待服务"></i-tab>
+    <i-tab key="2" title="已完成"></i-tab>
+  </i-tabs>
+  <view>
+  <block wx:for='{{orderList}}' wx:key='{{index}}'> 
+    <view id='{{item.orderNum}}' class='order-item' bindtap='toOrderDetail'>
+      <view class='order-tit'>
+        订单编号：{{item.orderNum}}
+        <text class='fr' style='color:rgba(255, 156, 19, 1);margin-right:5rpx;'>{{item.status}}</text>
+      </view>
+      <view class='order-info'>
+        <view>项目名称 :   {{item.projectName}}</view>
+        <view>服务时长：{{item.times}}min</view>
+        <view>服务时间：{{item.serviceBeginTime}}</view>
+      </view>
+      <view class='order-tit'>
+        <view class='inline'>订单价格：{{item.amount}}</view>
+        <!-- <text class='fr'>状态：{{item.status}}</text> -->
+      </view>
+    </view>
+    </block>
+  <i-load-more wx:if='{{orderList.length==0}}' i-class='noList'  tip="暂无订单" loading="{{ false }}" />
+  </view>
+</view>

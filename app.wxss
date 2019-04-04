@@ -1,0 +1,62 @@
+/**app.wxss**/
+
+page {
+  background: #eee;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.ov {
+  overflow: hidden;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.none-img {
+  width: 750rpx;
+  height: 750rpx;
+}
+
+.none-text {
+  width: 750rpx;
+  text-align: center;
+  color: #b5b4b4;
+}
+
+.none-eva {
+  font-size: 28rpx;
+  color: #666;
+  padding: 50rpx 20rpx;
+}
+
+.t-l{
+  text-align: left;
+}
+.t-r{
+  text-align: right;
+}
+.t-c{
+text-align: center;
+}
+.noList{
+  position: relative;
+  top: 400rpx;
+}

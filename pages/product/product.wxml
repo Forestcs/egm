@@ -1,0 +1,93 @@
+<view>
+<i-toast id="toast"/>
+  <i-tabs current="{{ currentTab }}" color="#FF9C13" bindchange="handleChange">
+    <i-tab key="0" title="申请记录"></i-tab>
+    <i-tab key="1" title="申请产品"></i-tab>
+  </i-tabs>
+  <!-- 申请筛选 -->
+  <view wx:if='{{currentTab==1}}' class='type-top' bindtap='changeType'>
+    <view class='type-tit-lf'>产品名称</view>
+    <view class='type-tit-rg'>点击选择
+      <i-icon type="enter" style='position:relative;top:-3rpx;' />
+    </view>
+  </view>
+  <view class="type-bottom {{changeType==0?'type-none':'type-block'}}">
+    <block wx:for='{{chooseList}}'>
+      <view id='{{item.code}}' class="type-btn {{item.statues==1?'now-btn':''}}" bindtap="chooseBtn"> {{item.name}} </view>
+    </block>
+  </view>
+  <!-- 记录筛选 -->
+  <view wx:if='{{currentTab==0}}'>
+    <view class='list-type'>
+      <picker bindchange="applyTimeChange" value="{{timeIndex}}" range="{{applyTime}}">
+        <view class="picker">
+          {{applyTime[timeIndex]}}
+          <i-icon type="unfold" />
+        </view>
+      </picker>
+    </view>
+    <view class='list-type'>
+      <picker bindchange="productNameChange" range-key="{{'name'}}"  value="{{nameIndex}}" range="{{chooseList}}">
+        <view class="picker">
+          {{chooseList[nameIndex].name}}
+          <i-icon type="unfold" />
+        </view>
+      </picker>
+    </view>
+  </view>
+  <swiper style="height:{{currentTab==1?clientHeight*2-269+'rpx':clientHeight*2-174+'rpx'}};" class='tab-swiper' current="{{currentTab}}" duration="300">
+    <!-- 申请记录tab页面 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+    <i-load-more wx:if='{{recordList.length==0}}' i-class='noList'  tip="暂无记录" loading="{{ false }}" />      
+        <view class='apply-container'>
+          <block wx:for='{{recordList}}'>
+            <view class='item-flex'>
+              <view class=''>
+                <image src='../../assets/image/0.jpg'></image>
+              </view>
+              <view class='item-center'>
+                <view class='item-name'>{{item.productName}} </view>
+                <view class='item-time'>{{item.createTime}}</view>
+                <view class='item-num'>
+                  <text>{{item.quanTum}}</text>
+                  /    {{item.unit}}
+                  </view>
+              </view>
+              <view class='item-statues'>{{item.tip}}</view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <!-- 我要申请tab页面 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view class='apply-container'>
+          <block wx:for='{{productList}}'>
+            <view class='item-flex'>
+              <view class=''>
+                <image src='../../assets/image/0.jpg'></image>
+              </view>
+              <view class='item-center'>
+                <view class='item-name'>{{item.productName}} /  {{item.unit}}</view>
+                <view style='padding-top:30rpx;'>
+                  <i-input-number bindtap='setNumber' id='{{index}}' i-class='num-in' value="{{item.quantum}}" min="1" max="20" bindchange="numberChange" />
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <view wx:if='{{currentTab==1}}' class='apply-bottom'>
+    <!-- 选择复选框 -->
+    <!-- <view class='fl apply-all'>
+      <i-checkbox value="{{all}}" disabled="{{disabled}}" checked="{{checked}}" bindchange="allChange">
+    </i-checkbox>
+    </view> -->
+    <view class='fr appply-btn' bindtap='toApply'>申请产品</view>
+    <!-- <view class='fr appply-del'>删除</view> -->
+  </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "人脉信息",
+  "usingComponents": {
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-icon": "../../dist/icon/index",
+    "i-message": "../../dist/message/index",
+    "i-load-more": "../../dist/load-more/index"
+  }
+}

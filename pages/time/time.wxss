@@ -1,0 +1,73 @@
+
+
+.list-type {
+  display: inline-block;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  padding-left: 30rpx;
+  margin: 0;
+  color: rgba(153, 153, 153, 1);
+  border-bottom: 1rpx solid rgb(241, 241, 241);
+  background: #fff;
+  text-align: left;
+}
+
+.craftsman-time {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.craftsman-tab-time {
+  padding: 20rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.craftsman-tab-time view {
+  width: 137rpx;
+  font-size: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.i-tags {
+  position: relative;
+  top: -2rpx;
+}
+
+.noServes{
+  background: rgb(251, 248, 241)
+}
+.ill{
+   background: rgb(207, 207, 207)
+}
+.hasServes{
+  background: rgb(255, 138, 117)
+}
+.time-tip {
+  height: 40rpx;
+  padding: 20rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #80848f;
+}
+
+.craftsman-tip {
+  font-size: 24rpx;
+  padding:12rpx 0rpx 2rpx 20rpx;
+  width: 100%;
+}
+
+.tip-item{
+  width: 200rpx;
+  height: 50rpx;
+}
+
+.tip-item image{
+  width: 40rpx;
+  height: 40rpx;
+}

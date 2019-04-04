@@ -1,0 +1,23 @@
+{
+  "pages":[    
+    "pages/home/home",    
+    "pages/return/return",    
+    "pages/finance/finance",    
+    "pages/order/order",
+    "pages/order/orderDetail/orderDetail",
+    "pages/time/time",
+    "pages/vacation/vacation",
+    "pages/login/login",    
+    "pages/product/product",    
+    "pages/connection/connection",
+    "pages/news/news",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "美疗师",
+    "backgroundColor": "#f6f6f8",
+    "navigationBarTextStyle": "black"
+  }
+}

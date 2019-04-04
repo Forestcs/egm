@@ -1,0 +1,46 @@
+<view>
+<i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+  <view class='home-top'>
+    <view class='home-head'>
+      <image src='{{userInfo.avatarImg}}'></image>
+    </view>
+    <view class='t-c'>{{userInfo.name}}</view>
+    <view class='home-btn'>
+      <button id='1' class='btn-color-1'  bindtap='toRouter'>我的消息</button>
+      <!-- <i-badge count="66" i-class="badge" />             -->
+      <button  id='2' class='btn-color-2' hover-class='btn-hover-2' bindtap='toRouter'>我的产品</button>
+    </view>
+  </view>
+  <view class='home-bottom'>
+    <view class='home-item'>
+      <view id='3' class='home-menu'  bindtap='toRouter'>
+        <image id='3' catchtap='toRouter' src='../../assets/icon/m1.png'></image>
+        <view class='t-c'>订单</view>
+      </view>
+      <view id='4' class='home-menu'  bindtap='toRouter'>
+        <image id='4'   catchtap='toRouter' src='../../assets/icon/m2.png'></image>
+        <view class='t-c'>收入</view>
+      </view>
+    </view>
+    <view class='home-item'>
+      <view id='5' class='home-menu'  bindtap='toRouter'>
+        <image  id='5'   catchtap='toRouter' src='../../assets/icon/m3.png'></image>
+        <view class='t-c'>时间</view>
+      </view>
+      <view id='6' class='home-menu'  bindtap='toRouter'>
+        <image  id='6'   catchtap='toRouter' src='../../assets/icon/m4.png'></image>
+        <view class='t-c'>假期</view>
+      </view>
+    </view>
+    <view class='home-item'>
+      <view id='7' class='home-menu'  bindtap='toRouter'>
+        <image  id='7'   catchtap='toRouter' src='../../assets/icon/m5.png'></image>
+        <view class='t-c'>回单率</view>
+      </view>
+      <view id='8' class='home-menu'  bindtap='toRouter'>
+        <image  id='8'   catchtap='toRouter' src='../../assets/icon/m6.png'></image>
+        <view class='t-c'>人脉</view>
+      </view>
+    </view>
+  </view>
+</view>

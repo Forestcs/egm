@@ -1,0 +1,47 @@
+ page {
+  background-color: #fff;
+} 
+.login-title {
+  font-size: 36rpx;
+  color: #666;
+  padding: 120rpx 0 150rpx 0;
+  text-align: center;
+}
+
+.login-title view {
+  position: relative;
+  top: -1rpx;
+  display: inline-block;
+  width: 14rpx;
+  height: 14rpx;
+  margin: 0 4rpx;
+  background: #ff9f00;
+  border-radius: 15rpx;
+}
+
+.form-in {
+  display: flex;
+  justify-content: center;
+}
+
+.form-in input {
+  width: 588rpx;
+  height: 33rpx;
+  line-height: 33rpx;
+  padding: 40rpx 0 26rpx 0;
+  border-bottom: 2rpx solid #efefef;
+}
+
+.in-place {
+  font-size: 31rpx;
+  color: rgba(204, 204, 204, 1);
+}
+.form-sub button{
+  width: 588rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 100rpx;
+  color: #fff;
+  font-size: 30rpx;
+  background: #FF9F00
+}

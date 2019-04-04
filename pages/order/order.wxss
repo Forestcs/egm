@@ -1,0 +1,39 @@
+/* pages/order/order.wxss */
+
+.order-item {
+  padding: 0 28rpx;
+  margin-top: 25rpx;
+  background: #fff;
+}
+
+.order-tit {
+  /* width: 500rpx; */
+  padding: 35rpx 0;
+  font-size: 28rpx;
+  color: rgba(50, 50, 50, 1);
+  margin-bottom: 10rpx;
+  border-bottom: 1rpx solid rgba(229, 229, 229, 1);
+}
+
+.order-info {
+  padding-bottom: 35rpx;
+  border-bottom: 1rpx solid rgba(229, 229, 229, 1);
+}
+
+.order-info view {
+  padding-top: 25rpx;
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.order-tit button {
+  float: right;
+  width: 126rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  padding: 0;
+  font-size:24rpx;
+  color: rgba(255, 156, 19, 1);
+  border-radius: 8rpx;
+  border: 1rpx solid  rgba(255, 156, 19, 1);
+}
