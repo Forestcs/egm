@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "时间详情",
+  "usingComponents": {
+    "i-tag": "../../dist/tag/index",
+    "i-toast":"../../dist/toast/index"
+  }
+}

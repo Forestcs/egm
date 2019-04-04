@@ -1,0 +1,29 @@
+<view>
+<i-message id="message" />
+  <view>
+    <i-tabs current="{{ current }}" color="#DBBA7B" bindchange="handleChange">
+      <i-tab key="tab1" title="一级人脉"></i-tab>
+      <i-tab key="tab2" title="二级人脉"></i-tab>
+      <i-tab key="tab3" title="三级人脉"></i-tab>
+    </i-tabs>
+  </view>
+  <view class='orderNum-bottom'>
+    <view class='orderNum-tit'>
+      <view class='fl'>人员信息</view>
+      <view class='fr'>消费额度</view>
+    </view>
+    <view  wx:if='{{personList.length!=0}}'  class='orderNum-list'>
+      <!-- <block wx:for='{{personList}}'> -->
+        <view class='orderNum-item' id='{{item.id}}' bindtap='toConnectionDetail'>
+          <!-- <view class='inline'>
+          <image src='../../../../assets/icon/nav_2.png'></image>
+        </view> -->
+          <block wx:for='{{personList}}'>
+          <view>{{item.id}}</view>
+          </block>
+        </view>
+      <!-- </block> -->
+    </view>
+  </view>
+  <i-load-more  i-class='noList' wx:if='{{personList.length==0}}' tip="暂无数据" loading="{{ false }}" />
+</view>

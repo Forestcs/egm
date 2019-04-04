@@ -1,0 +1,19 @@
+/* pages/return/return.wxss */
+.return-tit{
+  float: left;
+  width: 25%;
+  padding-left:25rpx;
+    height: 118rpx;
+  line-height: 118rpx;
+}
+.return-progress {
+  height: 118rpx;
+  line-height: 118rpx;
+  float: left;
+  width: 70%;
+}
+.return-item{
+  border-bottom: 1rpx solid #E5E5E5;
+  background: #fff;
+  overflow: hidden;
+}

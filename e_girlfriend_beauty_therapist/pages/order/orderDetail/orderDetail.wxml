@@ -1,0 +1,74 @@
+<view class='orderdetail-container'>
+<i-toast id="toast" />
+  <view class='orderdetail-head'>
+    <view class='fl'>
+      <image src='{{orderDetail.projectImg}}'></image>
+    </view>
+    <view class='fl'>
+      <view class='head-tit'>{{orderDetail.projectName}}</view>
+      <view class='head-money'>总价：¥{{orderDetail.amount}}</view>
+    </view>
+  </view>
+  <view class='orderdetail-list'>
+    <view class='orderdetail-list-tit'>订单信息 </view>
+    <view>
+      <text class='orderdetail-list-h1'>服务金额</text>
+      <text class='orderdetail-list-h2'>¥{{orderDetail.totalAmount}}</text>
+    </view>
+    <view>
+      <text class='orderdetail-list-h1'>服务时长</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.times}}分钟</text>
+    </view>
+    <view>
+      <text class='orderdetail-list-h1'>服务方式</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.addressType}}</text>
+    </view>
+    <view>
+      <text class='orderdetail-list-h1'>门店名称</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.storeName}}</text>
+    </view>
+    <view>
+      <text class='orderdetail-list-h1'>门店地址</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.address}}</text>
+    </view>
+    <view>
+      <text class='orderdetail-list-h1'>美疗师　</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.craName}}</text>
+    </view>
+    <view>
+      <text class='orderdetail-list-h1'>服务时间</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.serviceBeginTime}}</text>
+    </view>
+    <view wx:if='{{orderDetail.userName}}'>
+      <text class='orderdetail-list-h1'>客户名称</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.userName}}</text>
+    </view>
+    <view wx:if='{{orderDetail.phoneNum}}'>
+      <text class='orderdetail-list-h1'>手机号码</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.phoneNum}}</text>
+    </view>
+    <view wx:if='{{orderDetail.useraddressName}}'>
+      <text class='orderdetail-list-h1'>服务地址</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.address}}</text>
+    </view>
+    <view>
+      <text class='orderdetail-list-h1'>订单编号</text>
+      <text class='orderdetail-list-h2'>{{orderDetail.orderNum}}</text>
+    </view>
+  </view>
+  <view class='orderdetail-bottom'>
+    <view class='fl'>
+      <text class='money-h1'>¥{{orderDetail.amount}}</text>
+      <!-- <text class='money-h2'> ¥{{orderDetail.amount}}</text> -->
+    </view>
+     <view id='{{orderDetail.status}}' class='fr' bindtap='toConfirm' wx:if="{{orderDetail.status==1}}">
+      <text>开始服务</text>
+    </view>
+     <view id='{{orderDetail.status}}' class='fr' bindtap='toConfirm' wx:if="{{orderDetail.status==2}}">
+      <text>结束服务</text>
+    </view>
+    <view id='{{orderDetail.status}}' class='fr' bindtap='toConfirm' wx:if="{{orderDetail.status==5}}">
+      <text>完成订单</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,65 @@
+/* pages/me/connection/connection-order/connection-order.wxss */
+
+.orderNum-bottom {
+}
+
+.orderNum-bottom .orderNum-tit {
+  background: #f6f5f3;
+  height: 90rpx;
+}
+
+.orderNum-bottom .orderNum-tit view {
+  line-height: 90rpx;
+  font-size: 24rpx;
+  color: #949398;
+  padding: 0 25rpx;
+}
+
+.orderNum-item {
+  padding: 20rpx;
+  background: #fff;
+}
+
+.orderNum-item image {
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 65rpx;
+}
+
+.item-con {
+  display: inline-block;
+}
+
+.item-name {
+  font-size: 28rpx;
+  color: rgba(54, 60, 75, 1);
+  padding-bottom: 20rpx;
+}
+
+.item-time {
+  font-size: 24rpx;
+  color: rgba(132, 132, 132, 1);
+}
+
+.item-total {
+  float: left;
+  width: 290rpx;
+  padding: 0 10rpx;
+  /* line-height: 100rpx;
+  height: 100rpx; */
+}
+
+.item-money {
+  width: 350rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+}
+
+.orderNum-time {
+  height: 95rpx;
+  line-height: 95rpx;
+  padding-left: 25rpx;
+  font-size: 26rpx;
+  background: #fff;
+  color: rgba(86, 86, 86, 1);
+}

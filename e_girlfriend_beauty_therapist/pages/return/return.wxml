@@ -1,0 +1,19 @@
+<view>
+  <view class='return-item'>
+    <view class='return-tit'>一级回单</view>
+    <view class='return-progress'>
+      <i-progress i-class='return-progress' percent="{{returnObj.returnRateOne}}" status="active"></i-progress>
+    </view>
+  </view>
+<view class='return-item'>
+    <view class='return-tit'>二级回单</view>
+    <view class='return-progress'>
+      <i-progress i-class='return-progress' percent="{{returnObj.returnRateTwo}}" status="active"></i-progress>
+    </view>
+  </view><view class='return-item'>
+    <view class='return-tit'>三级回单</view>
+    <view class='return-progress'>
+      <i-progress i-class='return-progress' percent="{{returnObj.returnRateThree}}" status="active"></i-progress>
+    </view>
+  </view>
+</view>

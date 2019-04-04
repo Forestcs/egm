@@ -1,0 +1,64 @@
+/* pages/finance/finance.wxss */
+
+.finance-top {
+  overflow: hidden;  
+  background: #64d18d;
+  padding: 25rpx;
+  color: #fff;
+}
+
+.finance-tit1 {
+  padding-top: 70rpx;
+  font-size: 28rpx;
+}
+
+.finance-money {
+  padding-top: 25rpx;
+  font-size: 90rpx;
+}
+
+.finance-detail {
+  padding-top: 70rpx;
+}
+
+.finance-tit2 {
+  font-size: 20rpx;
+}
+
+.finance-num {
+  font-size: 34rpx;
+}
+
+.finance-inline {
+  float: left;
+  width: 35%;
+  padding-bottom: 50rpx;
+}
+
+.finance-tit3 {
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.finance-num2 {
+  float: right;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: rgba(153, 153, 153, 1);
+}
+.finance-bottom{
+  overflow: hidden;
+  background: #fff;
+  padding: 0 25rpx;
+  border-bottom: 1rpx solid rgb(243, 243, 243);
+}
+.finance-top image{
+  float: left;
+  width: 66rpx;
+  height: 66rpx;
+  margin-right: 33rpx;
+}

@@ -1,0 +1,27 @@
+<view>
+  <view class='pick-container'>
+    <view class='chosse-pick'>
+      <picker bindchange="timeChange" value="{{timeIndex}}" range="{{arrayTime}}">
+        <view class="picker">
+          {{arrayTime[timeIndex]?arrayTime[timeIndex]:arrayTime[1]}}  <i-icon type="unfold" />
+        </view>
+      </picker>
+    </view>
+    <view class='chosse-pick'>
+      <picker bindchange="typeChange" value="{{typeIndex}}" range="{{arrayType}}">
+        <view class="picker">
+          {{arrayType[typeIndex]?arrayType[typeIndex]:arrayType[1]}}  <i-icon type="unfold" />
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='news-list'>
+    <view class='news-item' wx:for='{{newsList}}'>
+      <view class='fl'>
+      <view class='new-tit'>{{item.conTent}}</view>
+      <view class='new-time'>{{item.createTime}}</view>
+      </view>
+      <view class='fr new-type'>{{item.status}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-badge": "../../dist/badge/index",
+    "i-spin": "../../dist/spin/index"
+  }
+}

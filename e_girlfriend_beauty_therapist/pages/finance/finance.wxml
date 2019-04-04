@@ -1,0 +1,30 @@
+<view>
+  <view class='finance-top'>
+    <view class='finance-tit1'>本月所得（元）</view>
+    <view class='finance-money'>¥{{financeData.income}}</view>
+    <view class='finance-detail'>
+    <image src='../../assets/icon/finace-m.png'></image>
+      <view class='finance-inline'>
+        <view class='finance-tit2'>本月完成单量（元）</view>
+        <view class='finance-num'>¥{{financeData.totleamount}}</view>
+      </view>
+      <image src='../../assets/icon/finace-l.png'></image>
+      <view class='finance-inline'>
+        <view class='finance-tit2'>本月完成订单</view>
+        <view class='finance-num'>{{financeData.totleOrder}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='finance-bottom'>
+    <view class='finance-tit3'>提成比例</view>
+    <view class='finance-num2'>{{financeData.scale}}</view>
+  </view>
+  <view class='finance-bottom' wx:if='{{financeData.scaleFor81}}'>
+    <view class='finance-tit3'>超额提成比例</view>
+    <view class='finance-num2'>{{financeData.scaleFor81}}</view>
+  </view>
+  <view class='finance-bottom'>
+    <view class='finance-tit3'>本月产品费用</view>
+    <view class='finance-num2'>¥{{financeData.applyAmount}}</view>
+  </view>
+</view>

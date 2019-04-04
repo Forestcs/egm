@@ -1,0 +1,40 @@
+<view class='craftsman-tab-item'>
+  <view class='list-type'>查看时间：
+    <view class='craftsman-time'>
+      <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='craftsman-tab-time'>
+    <view class="fl t-c {{timeList.ten==1 ||timeList.ten==2? 'noServes' : ''}}">10:00</view>
+    <view class="fl t-c {{timeList.halfTen==1 ||timeList.halfTen==2? 'noServes' : ''}}">10:30</view>
+    <view class="fl t-c {{timeList.eleven==1 ||timeList.eleven==2 ? 'noServes' : ''}}">11:00</view>
+    <view class="fl t-c {{timeList.halfEleven==1 ||timeList.halfEleven==2 ? 'noServes' : ''}}">11:30</view>
+    <view class="fl t-c {{timeList.twelve==1 ||timeList.twelve==2 ? 'noServes' : ''}}">12:00</view>
+    <view class="fl t-c {{timeList.halfTwelve==1 ||timeList.halfTwelve==2 ? 'noServes' : ''}}">12:30</view>
+    <view class="fl t-c {{timeList.one==1 ||timeList.one==2 ? 'noServes' : ''}}">13:00</view>
+    <view class="fl t-c {{timeList.halfOne==1 ||timeList.halfOne==2 ? 'noServes' : ''}}">13:30</view>
+    <view class="fl t-c {{timeList.two==1 ||timeList.two==2 ? 'noServes' : ''}}">14:00</view>
+    <view class="fl t-c {{timeList.halfTwo==1 ||timeList.halfTwo==2 ? 'noServes' : ''}}">14:30</view>
+    <view class="fl t-c {{timeList.three==1 ||timeList.three==2 ? 'noServes' : ''}}">15:00</view>
+    <view class="fl t-c {{timeList.halfThree==1 ||timeList.halfThree==2 ? 'noServes' : ''}}">15:30</view>
+    <view class="fl t-c {{timeList.four==1 ||timeList.four==2 ? 'noServes' : ''}}">16:00</view>
+    <view class="fl t-c {{timeList.halfFour==1 ||timeList.halfFour==2 ? 'noServes' : ''}}">16:30</view>
+    <view class="fl t-c {{timeList.five==1 ||timeList.five==2 ? 'noServes' : ''}}">17:00</view>
+    <view class="fl t-c {{timeList.halfFive==1 ||timeList.halfFive==2 ? 'noServes' : ''}}">17:30</view>
+    <view class="fl t-c {{timeList.six==1 ||timeList.six==2 ? 'noServes' : ''}}">18:00</view>
+    <view class="fl t-c {{timeList.halfSix==1 ||timeList.halfSix==2 ? 'noServes' : ''}}">18:30</view>
+    <view class="fl t-c {{timeList.seven==1 ||timeList.seven==2 ? 'noServes' : ''}}">19:00</view>
+    <view class="fl t-c {{timeList.halfSeven==1 ||timeList.halfSeven==2 ? 'noServes' : ''}}">19:30</view>
+  </view>
+  <view class='time-tip'>
+    <i-tag class="i-tags" color="yellow">
+    已占用
+    </i-tag>
+      *此颜色区域为不可用时间    
+  </view>
+  <i-toast id="toast" />
+</view>
