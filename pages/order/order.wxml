@@ -6,17 +6,20 @@
     <i-tab key="2" title="已完成"></i-tab>
   </i-tabs>
   <view>
-  <block wx:for='{{orderList}}'> 
+  <block wx:for='{{orderList}}' wx:key='{{index}}'> 
     <view id='{{item.orderNum}}' class='order-item' bindtap='toOrderDetail'>
-      <view class='order-tit'>订单编号：{{item.orderNum}}</view>
+      <view class='order-tit'>
+        订单编号：{{item.orderNum}}
+        <text class='fr' style='color:rgba(255, 156, 19, 1);margin-right:5rpx;'>{{item.status}}</text>
+      </view>
       <view class='order-info'>
-        <view>项目名称 :    {{item.projectName}}</view>
+        <view>项目名称 :   {{item.projectName}}</view>
         <view>服务时长：{{item.times}}min</view>
         <view>服务时间：{{item.serviceBeginTime}}</view>
       </view>
       <view class='order-tit'>
         <view class='inline'>订单价格：{{item.amount}}</view>
-        <button plain='true'>{{item.status}}</button>
+        <!-- <text class='fr'>状态：{{item.status}}</text> -->
       </view>
     </view>
     </block>

@@ -141,7 +141,7 @@ Page({
           that.setData({
             leaveList: []
           })
-          that.handleWarning();
+          // that.handleWarning();
         }
       }
     })

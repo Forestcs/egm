@@ -9,32 +9,40 @@
     </view>
   </view>
   <view class='craftsman-tab-time'>
-    <view class="fl t-c {{timeList.ten==1 ||timeList.ten==2? 'noServes' : ''}}">10:00</view>
-    <view class="fl t-c {{timeList.halfTen==1 ||timeList.halfTen==2? 'noServes' : ''}}">10:30</view>
-    <view class="fl t-c {{timeList.eleven==1 ||timeList.eleven==2 ? 'noServes' : ''}}">11:00</view>
-    <view class="fl t-c {{timeList.halfEleven==1 ||timeList.halfEleven==2 ? 'noServes' : ''}}">11:30</view>
-    <view class="fl t-c {{timeList.twelve==1 ||timeList.twelve==2 ? 'noServes' : ''}}">12:00</view>
-    <view class="fl t-c {{timeList.halfTwelve==1 ||timeList.halfTwelve==2 ? 'noServes' : ''}}">12:30</view>
-    <view class="fl t-c {{timeList.one==1 ||timeList.one==2 ? 'noServes' : ''}}">13:00</view>
-    <view class="fl t-c {{timeList.halfOne==1 ||timeList.halfOne==2 ? 'noServes' : ''}}">13:30</view>
-    <view class="fl t-c {{timeList.two==1 ||timeList.two==2 ? 'noServes' : ''}}">14:00</view>
-    <view class="fl t-c {{timeList.halfTwo==1 ||timeList.halfTwo==2 ? 'noServes' : ''}}">14:30</view>
-    <view class="fl t-c {{timeList.three==1 ||timeList.three==2 ? 'noServes' : ''}}">15:00</view>
-    <view class="fl t-c {{timeList.halfThree==1 ||timeList.halfThree==2 ? 'noServes' : ''}}">15:30</view>
-    <view class="fl t-c {{timeList.four==1 ||timeList.four==2 ? 'noServes' : ''}}">16:00</view>
-    <view class="fl t-c {{timeList.halfFour==1 ||timeList.halfFour==2 ? 'noServes' : ''}}">16:30</view>
-    <view class="fl t-c {{timeList.five==1 ||timeList.five==2 ? 'noServes' : ''}}">17:00</view>
-    <view class="fl t-c {{timeList.halfFive==1 ||timeList.halfFive==2 ? 'noServes' : ''}}">17:30</view>
-    <view class="fl t-c {{timeList.six==1 ||timeList.six==2 ? 'noServes' : ''}}">18:00</view>
-    <view class="fl t-c {{timeList.halfSix==1 ||timeList.halfSix==2 ? 'noServes' : ''}}">18:30</view>
-    <view class="fl t-c {{timeList.seven==1 ||timeList.seven==2 ? 'noServes' : ''}}">19:00</view>
-    <view class="fl t-c {{timeList.halfSeven==1 ||timeList.halfSeven==2 ? 'noServes' : ''}}">19:30</view>
-  </view>
-  <view class='time-tip'>
-    <i-tag class="i-tags" color="yellow">
-    已占用
-    </i-tag>
-      *此颜色区域为不可用时间    
+    <view class="fl t-c {{timeList.ten==0 ? 'noServes' : (timeList.ten==2?'ill': (timeList.ten==1 ? 'hasServes':''))}}">10:00</view>
+        <view class="fl t-c {{timeList.halfTen==0 ? 'noServes' :(timeList.halfTen==2?'ill':(timeList.halfTen==1 ? 'hasServes':''))}})}}">10:30</view>
+        <view class="fl t-c {{timeList.eleven==0 ? 'noServes' :(timeList.eleven==2?'ill':(timeList.eleven==1 ? 'hasServes':''))}})}}">11:00</view>
+        <view class="fl t-c {{timeList.halfEleven==0 ? 'noServes':(timeList.halfEleven==2 ?'ill':(timeList.halfEleven==1 ? 'hasServes':''))}})}}">11:30</view>
+        <view class="fl t-c {{timeList.twelve==0 ? 'noServes' :(timeList.twelve==2?'ill':(timeList.twelve==1 ? 'hasServes':''))}})}}">12:00</view>
+        <view class="fl t-c {{timeList.halfTwelve==0 ? 'noServes' :(timeList.halfTwelve==2?'ill':(timeList.halfTwelve==1 ? 'hasServes':''))}})}}">12:30</view>
+        <view class="fl t-c {{timeList.one==0 ? 'noServes' : (timeList.one==2?'ill':(timeList.one==1 ? 'hasServes':''))}})}}">13:00</view>
+        <view class="fl t-c {{timeList.halfOne==0 ? 'noServes' : (timeList.halfOne==2?'ill':(timeList.halfOne==1 ? 'hasServes':''))}})}}">13:30</view>
+        <view class="fl t-c {{timeList.two==0 ? 'noServes' :(timeList.two==2?'ill':(timeList.two==1 ? 'hasServes':''))}})}}">14:00</view>
+        <view class="fl t-c {{timeList.halfTwo==0 ? 'noServes' :(timeList.halfTwo==2?'ill':(timeList.halfTwo==1 ? 'hasServes':''))}})}}">14:30</view>
+        <view class="fl t-c {{timeList.three==0 ? 'noServes' : (timeList.three==2?'ill':(timeList.three==1 ? 'hasServes':''))}})}}">15:00</view>
+        <view class="fl t-c {{timeList.halfThree==0 ? 'noServes' :(timeList.halfThree==2?'ill':(timeList.halfThree==1 ? 'hasServes':''))}})}}">15:30</view>
+        <view class="fl t-c {{timeList.four==0 ? 'noServes' :(timeList.four==2?'ill':(timeList.four==1 ? 'hasServes':''))}})}}">16:00</view>
+        <view class="fl t-c {{timeList.halfFour==0 ? 'noServes' :(timeList.halfFour==2?'ill':(timeList.halfFour==1 ? 'hasServes':''))}})}}">16:30</view>
+        <view class="fl t-c {{timeList.five==0 ? 'noServes' :(timeList.five==2?'ill':(timeList.five==1 ? 'hasServes':''))}})}}">17:00</view>
+        <view class="fl t-c {{timeList.halfFive==0 ? 'noServes' :(timeList.halfFive==2?'ill':(timeList.halfFive==1 ? 'hasServes':''))}})}}">17:30</view>
+        <view class="fl t-c {{timeList.six==0 ? 'noServes' :(timeList.six==2?'ill':(timeList.six==1 ? 'hasServes':''))}})}}">18:00</view>
+        <view class="fl t-c {{timeList.halfSix==0 ? 'noServes' :(timeList.halfSix==2?'ill':(timeList.halfSix==1 ? 'hasServes':''))}})}}">18:30</view>
+        <view class="fl t-c {{timeList.seven==0 ? 'noServes' :(timeList.seven==2?'ill':(timeList.seven==1 ? 'hasServes':''))}})}}">19:00</view>
+        <view class="fl t-c {{timeList.halfSeven==0 ? 'noServes' : (timeList.halfSeven==2?'ill':(timeList.halfSeven==1 ? 'hasServes':''))}})}}">19:30</view>
   </view>
   <i-toast id="toast" />
 </view>
+ <view class='craftsman-tip'>
+    <view class='fl tip-item'>
+      <image src='../../assets/icon/time-pink.png'></image> 
+      表示未预约，
+    </view>
+    <view class='fl tip-item'>
+      <image src='../../assets/icon/time-gray.png'></image> 
+      表示请假，
+    </view>
+    <view class='fl tip-item'>
+      <image src='../../assets/icon/time-red.png'></image>
+       表示已预约
+    </view>
+  </view>

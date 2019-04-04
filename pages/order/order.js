@@ -1,16 +1,30 @@
 // pages/order/order.js
 const app = getApp();
-const {$Message} = require('../../dist/base/index');
-Page({
+const {
+  $Message
+} = require('../../dist/base/index');
 
+Page({
   data: {
     currentTab: '0',
-    orderList:[]
+    orderList: [],
+    pageNumber: 1, // 页码
   },
 
-  onLoad: function (options) {
+  onLoad: function(options) {
+
+  },
+
+  onShow: function() {
+    // 页码
+    this.data.pageNumber = 1;
+    this.setData({
+      orderList: []
+    })
+
     this.getOrderList();
   },
+
   // tab
   handleChange({
     detail
@@ -18,16 +32,30 @@ Page({
     this.setData({
       currentTab: detail.key,
     });
+
+    // 重置页码和列表数据
+    this.data.pageNumber = 1;
+    this.setData({
+      orderList: []
+    })
+
     this.getOrderList(detail.key);
   },
-  getOrderList(num){
+
+  // 上拉加载
+  onReachBottom: function() {
+
+    this.getOrderList(this.data.currentTab, true);
+  },
+
+  getOrderList(num, loadMore) {
     var that = this;
     let user = {
       craId: wx.getStorageSync('user').id.toString(),
-      pageNo: '-1'
+      pageNo: this.data.pageNumber
     }
-    if(num){
-      switch(num){
+    if (num) {
+      switch (num) {
         case '1':
           user.status = 'WAITSERVICE';
           break;
@@ -37,14 +65,13 @@ Page({
       }
     }
     app.toEncryption(user);
-
     wx.request({
       url: 'https://www.hyegm.com/cra/order/getList.do',
       data: user,
       method: 'POST',
-      success: function (res) {
+      success: function(res) {
         if (res.data.code == '200') {
-          res.data.result.forEach(function (e, index) {
+          res.data.result.forEach(function(e, index) {
             switch (e.status) {
               case 'CLOSED':
                 e.statusCode = '1'
@@ -58,12 +85,12 @@ Page({
                 break;
               case 'WAITSERVICE':
                 e.statusCode = '3'
-                e.status = '开始服务'
+                e.status = '待服务'
                 // 待服务
                 break;
               case 'SERVICE':
                 e.statusCode = '4'
-                e.status = '结束服务'
+                e.status = '服务中'
                 // 服务中
                 break;
               case 'ASSESS':
@@ -93,18 +120,29 @@ Page({
                 break;
             }
           });
+
+          let newDataList = that.data.orderList.concat(res.data.result);
           that.setData({
-            orderList: res.data.result
+            orderList: newDataList,
           })
+          that.data.pageNumber = that.data.pageNumber + 1;
+
+          console.log(res.data.result);
+          
         } else {
-          that.setData({
-            orderList: []
-          })
-          // that.handleWarning()
+          if (loadMore == true) {
+            // 无更多数据
+            wx.showToast({
+              title: '无更多数据',
+              icon: 'none',
+              duration: 1000
+            })
+          }
         }
       }
     })
   },
+
   handleWarning() {
     $Message({
       content: '暂时没有订单',
@@ -126,19 +164,15 @@ Page({
     }
     app.toEncryption(user);
     wx.request({
-      url: 'https://www.hyegm.com/cra/order/updateByOrderNum.do  ',
+      url: 'https://www.hyegm.com/cra/order/updateByOrderNum.do',
       data: user,
       method: 'POST',
-      success: function (res) {
+      success: function(res) {
         that.toEvaluate();
       }
     })
   },
-  onReady: function () {
+  onReady: function() {
 
-  },
-
-  onShow: function () {
-    this.getOrderList();
   }
 })

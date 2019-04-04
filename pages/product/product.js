@@ -71,9 +71,7 @@ Page({
     // })
   },
   // tab
-  handleChange({
-    detail
-  }) {
+  handleChange({detail}) {
     this.setData({
       currentTab: detail.key,
       changeType: '0',

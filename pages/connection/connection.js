@@ -56,7 +56,7 @@ Page({
           that.setData({
             personList: []
           })
-          that.handleWarning();
+          // that.handleWarning();
         } else {
           that.setData({
             personList: that.data.personList.concat(res.data.result)

@@ -95,7 +95,7 @@ Page({
     }
     app.toEncryption(user);
     wx.request({
-      url: 'https://www.hyegm.com/cra/order/updateByOrderNum.do  ',
+      url: 'https://www.hyegm.com/cra/order/updateByOrderNum.do',
       data: user,
       method: 'POST',
       success: function(res) {

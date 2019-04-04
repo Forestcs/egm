@@ -39,15 +39,35 @@
   top: -2rpx;
 }
 
-.noServes {
-  background: #f90;
-  color: #fff;
+.noServes{
+  background: rgb(251, 248, 241)
 }
-
+.ill{
+   background: rgb(207, 207, 207)
+}
+.hasServes{
+  background: rgb(255, 138, 117)
+}
 .time-tip {
   height: 40rpx;
   padding: 20rpx;
   font-size: 24rpx;
   line-height: 40rpx;
   color: #80848f;
+}
+
+.craftsman-tip {
+  font-size: 24rpx;
+  padding:12rpx 0rpx 2rpx 20rpx;
+  width: 100%;
+}
+
+.tip-item{
+  width: 200rpx;
+  height: 50rpx;
+}
+
+.tip-item image{
+  width: 40rpx;
+  height: 40rpx;
 }
