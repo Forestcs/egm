@@ -1,8 +1,9 @@
 // pages/home/home.js
-var util = require("../../utils/md5.js");
-var app = getApp();
+var util = require('../../utils/md5.js')
+var app = getApp()
 
 Page({
+
   /**
    * 页面的初始数据
    */
