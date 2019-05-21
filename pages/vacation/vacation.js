@@ -99,7 +99,7 @@ Page({
     }
     app.toEncryption(page);
     wx.request({
-      url: 'https://www.hyegm.com/cra/craftsman/getList.do',
+      url: `${require('../../utils/util').url}craftsman/getList.do`,
       data: page,
       method: 'POST',
       success: function(res) {
@@ -209,7 +209,7 @@ Page({
     }
     app.toEncryption(time);
     wx.request({
-      url: 'https://www.hyegm.com/cra/times/getTime.do',
+      url: `${require('../../utils/util').url}times/getTime.do`,
       data: time,
       method: 'POST',
       success: function(res) {
@@ -257,7 +257,7 @@ Page({
       app.toEncryption(page);
 
       wx.request({
-        url: 'https://www.hyegm.com/cra/craftsman/leaveApply.do',
+        url: `${require('../../utils/util').url}craftsman/leaveApply.do`,
         data: page,
         method: 'POST',
         success: function(res) {
@@ -308,7 +308,7 @@ Page({
     }
     app.toEncryption(news);
     wx.request({
-      url: 'https://www.hyegm.com/cra/news/saveNews.do',
+      url: `${require('../../utils/util').url}news/saveNews.do`,
       data: news,
       method: 'POST',
       success: function (res) {

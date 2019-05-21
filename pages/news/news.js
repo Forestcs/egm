@@ -27,7 +27,7 @@ Page({
     }
     app.toEncryption(time);
     wx.request({
-      url: 'https://www.hyegm.com/cra/news/getList.do',
+      url: `${require('../../utils/util').url}news/getList.do`,
       data: time,
       method: 'POST',
       success: function (res) {

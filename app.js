@@ -1,6 +1,6 @@
 //app.js
-var util = require('utils/md5.js')
-var aes = require('utils/aes.js')
+var util = require('./utils/md5.js')
+var aes = require('./utils/aes.js')
 //十六位十六进制数作为秘钥
 var key = aes.CryptoJS.enc.Utf8.parse('2017082817430823');
 //十六位十六进制数作为秘钥偏移量

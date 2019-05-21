@@ -145,7 +145,7 @@ Page({
     }
     app.toEncryption(page);
     wx.request({
-      url: 'https://www.hyegm.com/cra/product/getList.do',
+      url: `${require('../../utils/util').url}product/getList.do`,
       data: page,
       method: 'POST',
       success: function(res) {
@@ -187,7 +187,7 @@ Page({
     }
     app.toEncryption(applyArr);
     wx.request({
-      url: 'https://www.hyegm.com/cra/product/productApply.do',
+      url: `${require('../../utils/util').url}product/productApply.do`,
       data: applyArr,
       method: 'POST',
       success: function(res) {
@@ -233,7 +233,7 @@ Page({
     }
     app.toEncryption(page);
     wx.request({
-      url: 'https://www.hyegm.com/cra/news/saveNews.do',
+      url: `${require('../../utils/util').url}news/saveNews.do`,
       data: page,
       method: 'POST',
       success: function (res) {
@@ -295,7 +295,7 @@ Page({
     }
     app.toEncryption(page);
     wx.request({
-      url: 'https://www.hyegm.com/cra/product/getApplyList.do',
+      url: `${require('../../utils/util').url}product/getApplyList.do`,
       data: page,
       method: 'POST',
       success: function (res) {
@@ -342,7 +342,7 @@ Page({
     }
     app.toEncryption(news);
     wx.request({
-      url: 'https://www.hyegm.com/cra/news/saveNews.do',
+      url: `${require('../../utils/util').url}news/saveNews.do`,
       data: news,
       method: 'POST',
       success: function (res) {

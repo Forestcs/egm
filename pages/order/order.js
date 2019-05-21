@@ -66,7 +66,7 @@ Page({
     }
     app.toEncryption(user);
     wx.request({
-      url: 'https://www.hyegm.com/cra/order/getList.do',
+      url: `${require('../../utils/util').url}order/getList.do`,
       data: user,
       method: 'POST',
       success: function(res) {
@@ -164,7 +164,7 @@ Page({
     }
     app.toEncryption(user);
     wx.request({
-      url: 'https://www.hyegm.com/cra/order/updateByOrderNum.do',
+      url: `${require('../../utils/util').url}order/updateByOrderNum.do`,
       data: user,
       method: 'POST',
       success: function(res) {

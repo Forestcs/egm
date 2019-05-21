@@ -23,7 +23,7 @@ Page({
     }
     app.toEncryption(time);
     wx.request({
-      url: 'https://www.hyegm.com/cra/craftsman/getReturnRate.do',
+      url: `${require('../../utils/util').url}craftsman/getReturnRate.do`,
       data: time,
       method: 'POST',
       success: function (res) {

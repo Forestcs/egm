@@ -31,7 +31,7 @@ Page({
     }
     app.toEncryption(page);
     wx.request({
-      url: 'https://www.hyegm.com/cra/finance/findFinance.do',
+      url: `${require('../../utils/util').url}finance/findFinance.do`,
       // url: 'http://192.168.1.48:8080/finance/findFinance.do',
       data: page,
       method: 'POST',
