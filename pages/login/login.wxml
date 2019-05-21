@@ -6,6 +6,10 @@
 <!-- 后台错误提示 -->
 <i-toast id="toast" />
 
+  <view class='logoImg' >
+    <image src='../../assets/icon/logo.png'></image>
+  </view>
+
   <view class='login-title'>
     <view style='width:7rpx;height:7rpx;top:-5rpx;'></view>
     <view></view>
@@ -14,14 +18,19 @@
     <view style='width:7rpx;height:7rpx;top:-5rpx;'></view>
   </view>
   <form bindsubmit="formSubmit">
-    <view class='form-in'>
+    <view class='form-in username'>
+      <image class='icon' src='../../assets/icon/user.png'></image>
       <input name='loginName' type='number' maxlength="11" placeholder-class='in-place' placeholder="请输入用户名" />
     </view>
-    <view class='form-in'>
+    <view class='form-in password'>
+      <image class='icon' src='../../assets/icon/pass.png'></image>
       <input name="password" maxlength="20" placeholder-class='in-place' placeholder="请输入密码" password='true'/>
     </view>
     <view class='form-sub'>
-      <button type='default' formType="submit">立即登录</button>
+      <button type='default' formType="submit">登录</button>
+    </view>
+    <view class='forget'>
+      <text>忘记密码？</text>
     </view>
   </form>
 </view>
