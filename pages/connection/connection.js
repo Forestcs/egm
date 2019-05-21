@@ -47,7 +47,7 @@ Page({
     }
     app.toEncryption(timeObj);
     wx.request({
-      url: 'https://www.hyegm.com/cra/craftsman/getPeople.do',
+      url: `${require('../../utils/util').url}craftsman/getPeople.do`,
       data: timeObj,
       method: 'POST',
       success: function(res) {

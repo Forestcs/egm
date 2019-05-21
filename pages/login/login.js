@@ -56,9 +56,9 @@ Page({
     }
     loginForm.pwd = util.md5(loginForm.pwd);
     app.toEncryption(loginForm);
-
+    
     wx.request({
-      url: 'https://www.hyegm.com/cra/craftsman/login.do',
+      url: `${require('../../utils/util').url}craftsman/login.do`,
       data: loginForm,
       method: 'POST',
       success: function(res) {

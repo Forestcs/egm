@@ -36,7 +36,7 @@ Page({
         }
         app.toEncryption(time);
         wx.request({
-            url: 'https://www.hyegm.com/cra/times/getTime.do',
+            url: `${require('../../utils/util').url}times/getTime.do`,
             data: time,
             method: 'POST',
             success: function(res) {
@@ -82,7 +82,7 @@ Page({
         }
         app.toEncryption(time);
         wx.request({
-            url: 'https://www.hyegm.com/cra/craftsman/getListByDates.do',
+            url: `${require('../../utils/util').url}craftsman/getListByDates.do`,
             data: time,
             method: 'POST',
             success: function(res) {
