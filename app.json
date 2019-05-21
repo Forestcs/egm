@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/home/home",
     "pages/return/return",
     "pages/finance/finance",
@@ -7,7 +8,6 @@
     "pages/order/orderDetail/orderDetail",
     "pages/time/time",
     "pages/vacation/vacation",
-    "pages/login/login",
     "pages/product/product",
     "pages/connection/connection",
     "pages/news/news",
@@ -20,5 +20,27 @@
     "backgroundColor": "#f6f6f8",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": ""
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "工作台"
+      },
+      {
+        "pagePath": "pages/finance/finance",
+        "text": "我的"
+      }
+    ]
+  },
+
   "sitemapLocation": "sitemap.json"
 }
